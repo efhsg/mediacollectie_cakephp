@@ -22,14 +22,14 @@ services:
             args:
                 TIMEZONE: ${TIMEZONE}
         volumes:
-            - ${APP_PATH}/app:/app
+            - ${APP_PATH}/app:/var/www
     web:
         container_name: cake_mc_nginx
         image: nginx:latest
         ports:
             - "80:80"
         volumes:
-            - ./app:/app
+            - ./app:/var/www
             - ./docker/nginx/site.conf:/etc/nginx/conf.d/default.conf
             - ./logs/nginx/:/var/log/nginx
         links:
