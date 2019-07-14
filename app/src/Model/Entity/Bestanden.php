@@ -4,17 +4,18 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Schijven Entity
+ * Bestanden Entity
  *
  * @property int $id
  * @property \Cake\I18n\FrozenTime|null $created_at
  * @property \Cake\I18n\FrozenTime|null $updated_at
  * @property string $naam
- * @property int|null $capaciteit
- * @property int|null $beschikbaar
- * @property \Cake\I18n\FrozenDate|null $scandatum
+ * @property string|null $bestandstype
+ * @property int|null $map
+ * @property string|null $schijf
+ * @property int|null $grootte
  */
-class Schijven extends Entity
+class Bestanden extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -29,8 +30,9 @@ class Schijven extends Entity
         'created_at' => true,
         'updated_at' => true,
         'naam' => true,
-        'capaciteit' => true,
-        'beschikbaar' => true,
-        'scandatum' => true
+        'bestandstype' => true,
+        'map' => true,
+        'schijf' => true,
+        'grootte' => true
     ];
 }

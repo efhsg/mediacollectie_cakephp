@@ -1,21 +1,21 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\SchijvenTable;
+use App\Model\Table\BestandenTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\SchijvenTable Test Case
+ * App\Model\Table\BestandenTable Test Case
  */
-class SchijvenTableTest extends TestCase
+class BestandenTableTest extends TestCase
 {
     /**
      * Test subject
      *
-     * @var \App\Model\Table\SchijvenTable
+     * @var \App\Model\Table\BestandenTable
      */
-    public $Schijven;
+    public $Bestanden;
 
     /**
      * Fixtures
@@ -23,7 +23,7 @@ class SchijvenTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.Schijven'
+        'app.Bestanden'
     ];
 
     /**
@@ -34,8 +34,8 @@ class SchijvenTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Schijven') ? [] : ['className' => SchijvenTable::class];
-        $this->Schijven = TableRegistry::getTableLocator()->get('Schijven', $config);
+        $config = TableRegistry::getTableLocator()->exists('Bestanden') ? [] : ['className' => BestandenTable::class];
+        $this->Bestanden = TableRegistry::getTableLocator()->get('Bestanden', $config);
     }
 
     /**
@@ -45,7 +45,7 @@ class SchijvenTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Schijven);
+        unset($this->Bestanden);
 
         parent::tearDown();
     }
@@ -66,16 +66,6 @@ class SchijvenTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test buildRules method
-     *
-     * @return void
-     */
-    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

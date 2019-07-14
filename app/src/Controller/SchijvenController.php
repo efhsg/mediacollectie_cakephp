@@ -25,6 +25,17 @@ class SchijvenController extends AppController
     }
 
     /**
+     *
+     * @return \Cake\Http\Response|null
+     */
+    public function export()
+    {
+        $this->Flash->success(__('Export!!!!!!!!!!!!!!!!!!!'));
+        return $this->redirect(['action' => 'index']);
+    }
+
+
+    /**
      * View method
      *
      * @param string|null $id Schijven id.
