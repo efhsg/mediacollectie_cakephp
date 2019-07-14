@@ -23,6 +23,8 @@ services:
                 TIMEZONE: ${TIMEZONE}
         volumes:
             - ${APP_PATH}/app:/var/www
+        ports:
+            - "8080:8080"
     web:
         container_name: cake_mc_nginx
         image: nginx:latest
