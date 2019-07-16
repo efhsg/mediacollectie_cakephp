@@ -29,4 +29,6 @@ RUN docker-php-ext-install \
     pdo_mysql \
     opcache
 
+RUN yes | pecl install xdebug
+
 ENV PATH /root/.composer/vendor/bin:$PATH
